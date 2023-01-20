@@ -26,21 +26,21 @@
                     "foundSignupDate": ""
                 }
             ],
-            "url": "https://some-endpoint.com/execute"
+            "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
         }
     },
     "configurationArguments": {
        "save": {
-           "url": "URI/for/your/activity/save"
+           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
        },
        "publish": {
-           "url": "URI/for/your/activity/publish"
+           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
        },
        "validate": {
-           "url": "URI/for/your/activity/validate"
+           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
        },
        "stop": {
-           "url": "URI/for/your/activity/stop"
+           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
        }
     },
     "wizardSteps": [
