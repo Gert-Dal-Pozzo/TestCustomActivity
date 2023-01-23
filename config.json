@@ -31,16 +31,16 @@
     },
     "configurationArguments": {
        "save": {
-           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
+           "url": "https://webhook.site/265e4e1e-d5e7-4ad9-922e-dbf17425f190"
        },
        "publish": {
-           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
+           "url": "https://webhook.site/30ddd796-32e3-4d84-b286-f140c473ef07"
        },
        "validate": {
-           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
+           "url": "https://webhook.site/3a399269-967c-4be5-9d7d-1919f0a7f54d"
        },
        "stop": {
-           "url": "https://webhook.site/e757ad9f-94be-4203-889e-17e0435a8871"
+           "url": "https://webhook.site/945cf3af-7e9c-4e7c-b305-204891a64ea0"
        }
     },
     "wizardSteps": [
