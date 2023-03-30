@@ -4,6 +4,7 @@
     <script type="text/javascript" src="//cdn.evgnet.com/beacon/cesposito523002365/dec2022_staging/scripts/evergage.min.js"></script>
     <script>
         document.addEventListener(Evergage.CustomEvents.OnEventResponse, (e) => {
+          console.log(e);
           if(e.detail.response && e.detail.reponse.campaignResponses){
             let stats = [];
             for (const camp of e.detail.response.campaignResponses){
@@ -13,6 +14,7 @@
                 
                 var textElement = document.getElementById("campaignResponse");
                 textElement.innerHTML += "<br/>"+payload;
+                console.log(payload);
               }
               
               stats.push({
