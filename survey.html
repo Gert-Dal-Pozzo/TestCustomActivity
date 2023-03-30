@@ -2,10 +2,36 @@
 <html>
   <head>
     <script type="text/javascript" src="//cdn.evgnet.com/beacon/cesposito523002365/dec2022_staging/scripts/evergage.min.js"></script>
+    <script>
+        document.addEventListener(Evergage.CustomEvents.OnEventResponse, (e) => {
+          if(e.detail.response && e.detail.reponse.campaignResponses){
+            let stats = [];
+            for (const camp of e.detail.response.campaignResponses){
+              let payload = camp.payload;
+              let isControl = "Control" === payload.userGroup;
+              if (!isControl){
+                
+                var textElement = document.getElementById("campaignResponse");
+                textElement.innerHTML += "<br/>"+payload;
+              }
+              
+              stats.push({
+                experienceId : payload.experience
+                stat: "Impression",
+                control: isControl
+              });
+            }
+            Evergage.sendStat({campaignStats: stats});
+          }
+        });
+    </script>
   </head>
 <body>
 <div id="contentzone1">
 <h1 id="InnercontentZone">Please join the survey below</h1>
+  <div id="textContainer">
+    <p id="campaignResponse"></p>
+  </div>
   </div>
 
 </body>
