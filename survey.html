@@ -35,12 +35,12 @@
 			var data = '{"action":"test","source":{"channel":"Server","contentZones":[]},"user":{"id":"'+testUserId+'"}}';
 			var textResponse = "";
 			var headers = new Headers();
-			log("sending non auth Event API Request to SS Campaign");
+			console.log("sending non auth Event API Request to SS Campaign");
 			headers.append('content-type', 'application/x-www-form-urlencoded');
 			var getRequest = apiUrl;
 			fetch(getRequest, {method: 'POST',
 							   headers: headers,
-							   body: "event="+btoa(data)}).then(res => log(res));
+							   body: "event="+btoa(data)}).then(res => console.log(res));
         })();
  </script>
   </head>
