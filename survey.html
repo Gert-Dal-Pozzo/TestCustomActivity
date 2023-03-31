@@ -32,7 +32,8 @@
 		
         (function() {
             var apiUrl = 'https://cesposito523002365.australia-3.evergage.com/api2/event/dec2022_staging';
-			var data = '{"action":"test","source":{"channel":"Server","contentZones":[]},"user":{"id":"'+testUserId+'"}}';
+			// Non funziona, va tolta l'indicazione della source var data = '{"action":"test","source":{"channel":"Server","contentZones":[]},"user":{"id":"'+testUserId+'"}}';
+			var data = '{"action":"test","source":{"contentZones":[]},"user":{"id":"'+testUserId+'"}}';
 			var textResponse = "";
 			var headers = new Headers();
 			console.log("sending non auth Event API Request to SS Campaign");
