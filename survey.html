@@ -47,7 +47,7 @@
 	  
 	  
 	  
-<script type="text/javascript">     
+<!-- script type="text/javascript">     
      var testUserId = "Test_EncContactKey";
 		
         (function() {
@@ -63,8 +63,27 @@
 					   headers: headers
 					  }).then(res => console.log(res));
         })();
+ </script -->
+
+	 <script type="text/javascript">     
+     var testUserId = "Test_EncContactKey";
+		
+        (function() {
+            var apiUrl = 'https://cesposito523002365.australia-3.evergage.com/api2/authevent/dec2022_staging';
+			var data = '{"action":"test","source":{"channel":"Server","contentZones":[]},"user":{"id":"'+testUserId+'"}}';
+			
+			var textResponse = "";
+			var headers = new Headers();
+			console.log("sending auth Event API Request to SS Campaign");
+			headers.append('content-type', 'application/json');
+			headers.append('Authorization', 'Basic '+btoa("AACEAA8D-85EE-46C2-AD40-1538E4DEC73C:IYjNVTciO5V_PKyw2avsMvQ6gZBI26eaptlbx1YkGMc"));
+			var getRequest = apiUrl;
+			fetch(getRequest, {method: 'POST',
+							   headers: headers,
+							   body: "event="+btoa(data)}).then(res => console.log(res));
+        })();
  </script>
-	  
+
 	  
   </head>
 <body>
