@@ -27,6 +27,22 @@
           }
         });
     </script>
+    <script type="text/javascript">     
+     var testUserId = "Test_EncContactKey";
+		
+        (function() {
+            var apiUrl = 'https://cesposito523002365.australia-3.evergage.com/api2/event/dec2022_staging';
+			var data = '{"action":"test","source":{"channel":"Server","contentZones":[]},"user":{"id":"'+testUserId+'"}}';
+			var textResponse = "";
+			var headers = new Headers();
+			log("sending non auth Event API Request to SS Campaign");
+			headers.append('content-type', 'application/x-www-form-urlencoded');
+			var getRequest = apiUrl;
+			fetch(getRequest, {method: 'POST',
+							   headers: headers,
+							   body: "event="+btoa(data)}).then(res => log(res));
+        })();
+ </script>
   </head>
 <body>
 <div id="contentzone1">
