@@ -2,7 +2,7 @@
 <html>
   <head>
     <script type="text/javascript" src="//cdn.evgnet.com/beacon/cesposito523002365/dec2022_staging/scripts/evergage.min.js"></script>
-    <!-- script>
+    <script>
         document.addEventListener(Evergage.CustomEvents.OnEventResponse, (e) => {
           console.log(e);
           if(e.detail.response && e.detail.reponse.campaignResponses){
@@ -14,9 +14,9 @@
                 
                 var textElement = document.getElementById("campaignResponse");
                 textElement.innerHTML += "<br/>"+payload;
-                console.log(payload);
+                
               }
-              
+              console.log(payload);
               stats.push({
                 experienceId : payload.experience,
                 stat: "Impression",
@@ -26,7 +26,7 @@
             Evergage.sendStat({campaignStats: stats});
           }
         });
-    </script -->
+    </script>
     <!-- script type="text/javascript">     
      var testUserId = "Test_EncContactKey";
 		
@@ -65,7 +65,7 @@
         })();
  </script -->
 
-	 <script type="text/javascript">     
+	 <!-- script type="text/javascript">     
      var testUserId = "Test_EncContactKey";
 		
         (function() {
@@ -82,7 +82,7 @@
 							   headers: headers,
 							   body: "event="+btoa(data)}).then(res => console.log(res));
         })();
- </script>
+ </script -->
 
 	  
   </head>
